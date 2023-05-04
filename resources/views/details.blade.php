@@ -14,21 +14,17 @@
         @vite('resources/js/app.js')
     </head>
     <body>
-        <div class="container d-flex flex-wrap gap-3 mt-3">
-            @foreach ($movies as $movie)
-            <a href="{{ route('details', $movie->id)}}" class="card-style">
-            <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 18rem">
                 
                 <div class="card-body">
                     <h4 class="card-title">Title: {{$movie->title }}</h4>
-                    <h6>Original Title: {{$movie->original_title }}</h6>    
-                    <div class="card-text">Realese: {{$movie->date }}</div>                               
+                    <h6>Original Title: {{$movie->original_title }}</h6>
+                    <div class="card-text">Nation: {{$movie->nationality }}</div>
+                    <div class="card-text">Realese: {{$movie->date }}</div>
+                    <div class="card-text">Vote: {{$movie->vote }}</div>
+                    
+                
                 </div>
             </div>
-            </a>
-               
-           @endforeach
-           
-        </div>
     </body>
 </html>
